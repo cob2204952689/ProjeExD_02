@@ -69,14 +69,14 @@ def main():
         key_lst = pg.key.get_pressed()
         sum_mv = [0, 0]
         muki = {
-            (-5,0):pg.transform.rotozoom(kk_img, 0, 2.0),
-            (-5,-5):pg.transform.rotozoom(kk_img, 45, 2.0),
-            (0,-5):pg.transform.rotozoom(kk_img, 90, 2.0),
-            (+5,-5):pg.transform.rotozoom(kk_img2, 90, 2.0),
-            (+5,0):pg.transform.rotozoom(kk_img2, 45, 2.0),
-            (+5,+5):pg.transform.rotozoom(kk_img2, 0, 2.0),
-            (0,+5):pg.transform.rotozoom(kk_img2, -45, 2.0),
-            (-5,+5):pg.transform.rotozoom(kk_img2, -90, 2.0)
+            (-5,0):pg.transform.rotozoom(kk_img, 0, 1.0),
+            (-5,-5):pg.transform.rotozoom(kk_img, 45, 1.0),
+            (0,-5):pg.transform.rotozoom(kk_img2, 90, 1.0),
+            (+5,-5):pg.transform.rotozoom(kk_img2, 45, 1.0),
+            (+5,0):pg.transform.rotozoom(kk_img2, 0, 1.0),
+            (+5,+5):pg.transform.rotozoom(kk_img2, -45, 1.0),
+            (0,+5):pg.transform.rotozoom(kk_img2, -90, 1.0),
+            (-5,+5):pg.transform.rotozoom(kk_img, -45, 1.0)
         }
         for key ,mv in delta.items():
             if key_lst[key]:
