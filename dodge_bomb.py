@@ -51,6 +51,9 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: 
                 return
+        if kk_rct.colliderect(bd_rct):
+            print("Game Over")
+            return
 
         screen.blit(bg_img, [0, 0])
 
@@ -73,7 +76,7 @@ def main():
         if not tate:
             vy *= -1
         screen.blit(bd_img,bd_rct)
-        
+
         pg.display.update()
         tmr += 1
         clock.tick(50)
